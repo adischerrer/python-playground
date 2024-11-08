@@ -1,5 +1,4 @@
 from collections import Counter
-from turtledemo.penrose import start
 
 letters: list[str] = ['a', 'a', 'b', 'b', 'b', 'c', 'd', 'd', 'd', 'd']
 print(f'{letters=}')
@@ -19,3 +18,4 @@ print("\n-----------------------------------------------------------------------
 for i, letter in enumerate('This is a text', start=1):
     print(f'{i} : {letter}')
 print("\n--------------------------------------------------------------------------------")
+
