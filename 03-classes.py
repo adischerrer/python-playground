@@ -26,3 +26,9 @@ print(yvonne)
 print(f"{adi.name}'s age is {adi.age_in_days()} days")
 print(f"{yvonne.name}'s age is {yvonne.age_in_days()} days")
 print(f"Age difference between {yvonne.name} and {adi.name} is {adi.age_diff(yvonne)} days")
+
+# Class info
+print(f'{dir(Person)=}')
+print(f'{adi.__dict__=}')
+print(f'{adi.__dict__.keys()=}')
+print(f'{adi.__dict__.values()=}')
