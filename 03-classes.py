@@ -1,0 +1,28 @@
+from datetime import date
+from typing import Self
+
+# __xyz__ Methods are called dunder (double underscore) methods.
+# Here's an example to initialize (__init__) or represent (__repr__) an object
+
+class Person:
+    def __init__(self, name: str, birthday: date, email: str) -> None:
+        self.name = name
+        self.birthday = birthday
+        self.email = email
+
+    def __repr__(self) -> str:
+        return f'Person(name={self.name}, birthday={self.birthday})'
+
+    def age_in_days(self) -> int:
+        return (date.today() - self.birthday).days
+
+    def age_diff(self, other_person: Self) -> int:
+        return abs((self.birthday - other_person.birthday).days)
+
+adi: Person = Person('Adi', date(year=1970, month=3, day=3), 'adi.scherrer@gmail.com')
+yvonne: Person = Person('Yvonne', date(year=1970, month=4, day=13), 'adi.scherrer@gmail.com')
+print(adi)
+print(yvonne)
+print(f"{adi.name}'s age is {adi.age_in_days()} days")
+print(f"{yvonne.name}'s age is {yvonne.age_in_days()} days")
+print(f"Age difference between {yvonne.name} and {adi.name} is {adi.age_diff(yvonne)} days")
