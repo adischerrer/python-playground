@@ -30,6 +30,11 @@ print("set:", my_set)
 print("dict:", my_dict)
 print("\n--------------------------------------------------------------------------------")
 
+# If/else in a one-liner
+number:int = 124
+print(f'Number {number} is ' + ('Even' if number % 2 == 0 else 'Odd'))
+print("\n--------------------------------------------------------------------------------")
+
 # Constants
 from typing import Final
 
