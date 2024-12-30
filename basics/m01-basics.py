@@ -31,6 +31,14 @@ print("set:", my_set)
 print("dict:", my_dict)
 print("\n--------------------------------------------------------------------------------")
 
+# If/else
+if my_int > 0:
+    print("Number is positive")
+elif my_int < 0:
+    print("Number is negative")
+else:
+    print("Number is zero")
+
 # If/else in a one-liner
 number: int = 124
 print(f'Number {number} is ' + ('Even' if number % 2 == 0 else 'Odd'))
@@ -44,10 +52,10 @@ print(MY_CONST)
 print("\n--------------------------------------------------------------------------------")
 
 some_numbers: list[int] = [12, 34, 56, 78]
-sum: int = 0
+total: int = 0
 for i in some_numbers:
-    sum += i
-print("Sum of", some_numbers, "=", sum)
+    total += i
+print("Sum of", some_numbers, "=", total)
 print("\n--------------------------------------------------------------------------------")
 
 some_names: list[str] = ["Beat", "Christoph", "Adi", 'Single', "Double"]
