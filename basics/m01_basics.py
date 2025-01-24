@@ -31,6 +31,14 @@ print("set:", my_set)
 print("dict:", my_dict)
 print("\n--------------------------------------------------------------------------------")
 
+# If/else
+if my_int > 0:
+    print("Number is positive")
+elif my_int < 0:
+    print("Number is negative")
+else:
+    print("Number is zero")
+
 # If/else in a one-liner
 number: int = 124
 print(f'Number {number} is ' + ('Even' if number % 2 == 0 else 'Odd'))
@@ -44,10 +52,10 @@ print(MY_CONST)
 print("\n--------------------------------------------------------------------------------")
 
 some_numbers: list[int] = [12, 34, 56, 78]
-sum: int = 0
+total: int = 0
 for i in some_numbers:
-    sum += i
-print("Sum of", some_numbers, "=", sum)
+    total += i
+print("Sum of", some_numbers, "=", total)
 print("\n--------------------------------------------------------------------------------")
 
 some_names: list[str] = ["Beat", "Christoph", "Adi", 'Single', "Double"]
@@ -69,3 +77,15 @@ print("Short names: (append to list)", short_names)
 short_names_comp: list[str] = [name for name in some_names if len(name) <= 4]
 print("Short names: (comprehension)", short_names_comp)
 print("\n--------------------------------------------------------------------------------")
+
+def get_status_text(status:int) -> str:
+    match status:
+        case 200:
+            return "Success"
+        case 400:
+            return "Bad request"
+        case 404:
+            return "Not found"
+        case _:
+            return "Unknown status"
+print(get_status_text(200))
