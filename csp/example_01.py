@@ -100,7 +100,7 @@ def define_problem():
 
 
 def main():
-    find_all_solutions: bool = True
+    find_all_solutions: bool = False
 
     p: Problem = define_problem()
     if find_all_solutions:
@@ -114,6 +114,7 @@ def main():
 
 
 if __name__ == "__main__":
+    print("Finding one solution takes about 60 sec. Finding all solutions takes much longer.")
     time_start: float = time()
     main()
     time_end: float = time()
